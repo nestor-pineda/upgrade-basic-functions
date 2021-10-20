@@ -73,3 +73,15 @@ function removeDuplicates(param) {
   return uniques;
 }
 console.log(removeDuplicates(duplicates));
+
+// 7
+
+const nameFinder = ["Peter", "Steve", "Tony", "Natasha", "Clint", "Logan", "Xabier", "Bruce", "Peggy", "Jessica", "Marc"];
+
+function finderName(param) {
+  let incluye = nameFinder.includes("Natasha");
+  let posicion = nameFinder.indexOf("Natasha");
+  return `Es ${incluye} que Natasha está y su posicion es: ${posicion}`;
+}
+
+console.log(finderName(nameFinder));
