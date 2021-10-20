@@ -22,3 +22,12 @@ function findLongestWord(param) {
 }
 
 console.log(findLongestWord(avengers)); // Devuelve Captain A.
+
+// #3: Calcular la suma
+const numbers = [1, 2, 3, 5, 45, 37, 58];
+
+let suma = numbers.reduce(function (total, numero) {
+  return total + numero;
+}, 0);
+
+console.log(suma); // Devuelve 151
