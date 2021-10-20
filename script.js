@@ -16,9 +16,9 @@ const avengers = ["Hulk", "Thor", "IronMan", "Captain A.", "Spiderman", "Captain
 
 function findLongestWord(param) {
   let avengersOrdenado = avengers.sort(function (primero, segundo) {
-    return siguiente.length - anterior.length;
+    return segundo.length - primero.length;
   });
   return avengersOrdenado[0];
 }
 
-console.log(findLongestWord(avengers)); // devuelve Captain A.
+console.log(findLongestWord(avengers)); // Devuelve Captain A.
