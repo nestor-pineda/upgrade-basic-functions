@@ -74,7 +74,7 @@ function removeDuplicates(param) {
 }
 console.log(removeDuplicates(duplicates));
 
-// 7
+// #7: Buscador de nombres
 
 const nameFinder = ["Peter", "Steve", "Tony", "Natasha", "Clint", "Logan", "Xabier", "Bruce", "Peggy", "Jessica", "Marc"];
 
@@ -85,3 +85,13 @@ function finderName(param) {
 }
 
 console.log(finderName(nameFinder));
+
+// #8: Contador de repeticiones
+const counterWords = ["code", "repeat", "eat", "sleep", "code", "enjoy", "sleep", "code", "enjoy", "upgrade", "code"];
+
+const cantidadPalabras = counterWords.reduce(function (contadorNombre, nombre) {
+  contadorNombre[nombre] = (contadorNombre[nombre] || 0) + 1;
+  return contadorNombre;
+}, {});
+
+console.log(cantidadPalabras);
