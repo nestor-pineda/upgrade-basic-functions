@@ -1,6 +1,8 @@
 "use strict";
 
 // #1: Buscar el máximo
+// Completa la función que tomando dos números como argumento devuelva el más alto.
+
 function sum(numberOne, numberTwo) {
   if (numberOne > numberTwo) {
     console.log(numberOne);
@@ -12,6 +14,8 @@ function sum(numberOne, numberTwo) {
 sum(7, 8); // Devuelve 8.
 
 // #2: Buscar la palabra más larga
+//Completa la función que tomando un array de strings como argumento devuelva el más largo, en caso de que dos strings tenga la misma longitud deberá devolver el primero.
+
 const avengers = ["Hulk", "Thor", "IronMan", "Captain A.", "Spiderman", "Captain M."];
 
 function findLongestWord(param) {
@@ -43,23 +47,34 @@ let promedio = sumatorio / numeros.length;
 console.log(promedio); // Devuelve 23.428571428571427
 
 // #5: Calcular promedio de strings
+// Crea una función que reciba por parámetro un array y cuando es un valor number lo sume y de lo contrario cuente la longitud del string y lo sume. Puedes usar este array para probar tu función:
 
 const mixedElements = [6, 1, "Rayo", 1, "vallecano", "10", "upgrade", 8, "hub"];
+let onlyNumbers = [];
+let onlyStrings = [];
 
-/* function averageWord(param) {
-  for (let i = 0; i < mixedElements.length; i++) {
-    if (typeof mixedElements[i] == "number") {
-      mixedElements.reduce(function (total, numero) {
-        return total + numero;
-      });
+function filterArray(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      onlyNumbers.push(arr[i]);
+    } else if (typeof arr[i] !== "number") {
+      onlyStrings.push(arr[i].length);
     }
   }
+
+  let allNumbers = onlyNumbers.concat(onlyStrings);
+
+  let sumaDeTodo = allNumbers.reduce(function (total, numero) {
+    return total + numero;
+  }, 0);
+
+  return sumaDeTodo;
 }
 
-console.log(averageWord(mixedElements));
- */
+console.log(filterArray(mixedElements)); // Devuelve 41
 
 // #6: Valores únicos
+// Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, en caso que existan los elimina para retornar un array sin los elementos duplicados.
 const duplicates = ["sushi", "pizza", "burger", "potatoe", "pasta", "ice-cream", "pizza", "chicken", "onion rings", "pasta", "soda"];
 
 let uniques = [];
@@ -75,6 +90,7 @@ function removeDuplicates(param) {
 console.log(removeDuplicates(duplicates));
 
 // #7: Buscador de nombres
+// Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, en caso que existan los elimina para retornar un array sin los elementos duplicados.
 
 const nameFinder = ["Peter", "Steve", "Tony", "Natasha", "Clint", "Logan", "Xabier", "Bruce", "Peggy", "Jessica", "Marc"];
 
@@ -95,3 +111,5 @@ const cantidadPalabras = counterWords.reduce(function (contadorNombre, nombre) {
 }, {});
 
 console.log(cantidadPalabras);
+
+/////////////
